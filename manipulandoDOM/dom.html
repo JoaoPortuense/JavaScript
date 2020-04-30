@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class: "nome" />
+            <button class ="botao">Adicionar</button>
+        </div>
+        <script>
+            //var inputElement = document.getElementById('nome');
+            /*document.getElementsByTagName('input')[0] sempre retornara um vetor, então podemos escolher a posição conlocando um colchete.
+            document.getElementsByClassName('nome')[0] tambem retornara um vetor;
+            document.querySelector('body div#app input'); deixa a gente percorrer a nossa dom até encontrar determinado elemento
+            procurar pelo input que esta dentro da div app e esta dentro do body.
+            querySelector('input[name=nome]'); referenciando uma propriedade daquele elemento.
+            querySelectorAll('input'); retornara todos os inputs.*/
+            
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function(){
+                var text = inputElement.value;
+                alert(text);
+            }
+            console.log(inputElement);
+        </script>
+    </body>
+</html>
